@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: black; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        
+        /* Dit is de container voor je AI-Lerares */
+        .hologram-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            /* De truc: we flippen het beeld voor de spiegel */
+            transform: scaleY(-1); 
+            filter: brightness(1.5) contrast(1.2);
+        }
+
+        .ai-character {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Blauwe gloed toevoegen voor het hologram effect */
+            filter: drop-shadow(0 0 10px #00d4ff);
+        }
+
+        .instructions {
+            position: absolute;
+            bottom: 20px;
+            color: #00d4ff;
+            font-family: Arial;
+            text-align: center;
+            width: 100%;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hologram-container">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z/3o7TKMGpxPuc95dYpa/giphy.gif" class="ai-character">
+</div>
+
+<div class="instructions">
+    Plaats je hoesje/spiegel in een hoek van 45 graden op het scherm
+</div>
+
+<script>
+    // Toekomstige AI-functie: Gebruik de gyroscoop van de telefoon 
+    // om de hoek van het beeld aan te passen aan het hoesje.
+    window.addEventListener('deviceorientation', (event) => {
+        let tilt = event.beta; // Hoe schuin de telefoon ligt
+        // Hier kunnen we de transform: skew() aanpassen
+    });
+</script>
+
+</body>
+</html>
