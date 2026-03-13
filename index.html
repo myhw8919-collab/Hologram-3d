@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI 4D Hologram</title>
+    <style>
+        body { margin: 0; background: black; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        
+        /* De container voor de 4 projecties */
+        .hologram-stage {
+            position: relative;
+            width: 90vw;
+            height: 90vw;
+            max-width: 400px;
+            max-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* De basis-stijl voor elke AI-mentor */
+        .ai-avatar {
+            position: absolute;
+            width: 30%; /* Grootte van elk figuurtje */
+            height: auto;
+            object-fit: contain;
+            /* Blauwe neon glow voor het hologram effect */
+            filter: drop-shadow(0 0 10px #00d4ff) brightness(1.2);
+        }
+
+        /* De truc: we draaien elke avatar een andere kant op */
+        .up    { top: 5%;    left: 35%; transform: rotate(180deg) scaleY(-1); } /* BOVEN (Flipped voor spiegel) */
+        .down  { bottom: 5%; left: 35%; transform: rotate(0deg)   scaleY(-1); } /* ONDER (Flipped voor spiegel) */
+        .left  { left: 5%;   top: 35%;  transform: rotate(90deg)  scaleY(-1); } /* LINKS (Flipped voor spiegel) */
+        .right { right: 5%;  top: 35%;  transform: rotate(-90deg) scaleY(-1); } /* RECHTS (Flipped voor spiegel) */
+
+    </style>
+</head>
+<body>
+
+<div class="hologram-stage">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z/3o7TKMGpxPuc95dYpa/giphy.gif" class="ai-avatar up">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z/3o7TKMGpxPuc95dYpa/giphy.gif" class="ai-avatar down">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z/3o7TKMGpxPuc95dYpa/giphy.gif" class="ai-avatar left">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZ3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z3R4Z/3o7TKMGpxPuc95dYpa/giphy.gif" class="ai-avatar right">
+</div>
+
+</body>
+</html>
